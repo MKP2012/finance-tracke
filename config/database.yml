@@ -1,0 +1,27 @@
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8
+#   username: root
+#   password: root
+#   host: 127.0.0.1
+#   port: 3306
+
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  username: root
+  password: 
+  host: 127.0.0.1
+  port: 3306
+
+development:
+  <<: *default
+  database: finance_dev
+
+test:
+  <<: *default
+  database: finance_test
+
+production:
+  # <<: *default
+  database: finance_prd
